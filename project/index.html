@@ -5,55 +5,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@700&display=swap');
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Astrid&display=swap" rel="stylesheet">
+                
   </head>
   <body class="bg-green-500">
-    <div class="hero-page">
-      <div class="hero-heading bg-[url(https://s3-alpha-sig.figma.com/img/31b8/3538/1e66a27921bd50efdcec7289fbf5af1c?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hJEKMU5qyfaZZ3Qu9a6eaNWUKGCZJYog6o71YLtF34JWmW7rq2E1qnrE~o2H-~jObajnsoL84QmWn6Ory2USjN9BpD~9ETqRlyvgWr~nOLzjrtLFVGX~bFs9YV3xXWhavCLiv5NAX8FK4qx~LXT~IQipVHvROhBtSzzP2RhbYA-bQoBPdpKGd0bmeG2FkfGZnU-QA3cofVy-K1G~H8id3NlXvRE1ZxD8yN3S0tVZGf1xNN06UqUfDeS49n9cEEt--suTTzo7soIG1~WgZUpRLc8t~P0fGBy39eaI2lzIPQhF4io~gxa-XGVz84lEULvF1DXhVXSmkEGKMkzqsES5GA__)] h-screen bg-no-repeat bg-cover">
-        <div class="navbar bg-white/30 w-full max-w-[100%] py-4 px-8 flex items-center justify-between 
-                rounded-bl-[88px] rounded-tr-[88px] rounded-tl-[10px] rounded-br-[10px] shadow-lg">
-        <div class="navbar-container max-w-[1300px] w-full">
-          <div class="navbar-content flex items-center justify-between">
-            <div class="navbar-brand px-25">
-              <div class="logo flex-shrink-0">
-                <img src="/project/assets/img/Navbar Brand.png" alt="icon of a butterfly" class="h-10">
-              </div>
-            </div>
-            <div class="navbar-menu flex gap-30 ml-auto ">
-              <div class="link flex space-x-10 items-center text-white text-[14px] ml-auto"  style="font-family:'Instrument Sans', sans-serif;">
-                <a href="/project/about.html">About Us</a>
-              </div>
-              <div class="link flex items-center space-x-2 text-white text-[14px] items-center" style="font-family:'Instrument Sans', sans-serif;">
-                <a href="/project/services.html">Our Services</a>
-                <div class="icon">
-                  <img src="/project/assets/img/dropdown.png" alt="dropdown icon">
+    <section>
+      <div class="hero-page">
+        <div class="hero-heading bg-[url(https://s3-alpha-sig.figma.com/img/31b8/3538/1e66a27921bd50efdcec7289fbf5af1c?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hJEKMU5qyfaZZ3Qu9a6eaNWUKGCZJYog6o71YLtF34JWmW7rq2E1qnrE~o2H-~jObajnsoL84QmWn6Ory2USjN9BpD~9ETqRlyvgWr~nOLzjrtLFVGX~bFs9YV3xXWhavCLiv5NAX8FK4qx~LXT~IQipVHvROhBtSzzP2RhbYA-bQoBPdpKGd0bmeG2FkfGZnU-QA3cofVy-K1G~H8id3NlXvRE1ZxD8yN3S0tVZGf1xNN06UqUfDeS49n9cEEt--suTTzo7soIG1~WgZUpRLc8t~P0fGBy39eaI2lzIPQhF4io~gxa-XGVz84lEULvF1DXhVXSmkEGKMkzqsES5GA__)] h-screen bg-no-repeat bg-cover">
+          <div class="navbar bg-white/30 w-full max-w-[100%] py-4 px-8 flex items-center justify-between 
+                  rounded-bl-[88px] rounded-tr-[88px] rounded-tl-[10px] rounded-br-[10px] shadow-lg">
+          <div class="navbar-container max-w-[1300px] w-full">
+            <div class="navbar-content flex items-center justify-between">
+              <div class="navbar-brand px-25">
+                <div class="logo flex-shrink-0">
+                  <a href="/project/index.html"><img src="/project/assets/img/Navbar Brand.png" alt="icon of a butterfly" class="h-10"></a>
                 </div>
               </div>
-              <div class="link bg-white text-black px-5  rounded-full border border-gray-300 shadow-md w-[105px] h-[33px] items-center">
-                <button class="w-[65px] h-[17px]  items-center pt-2" style="font-family: 'Instrument Sans', sans-serif; font-size:12px; ">Contact us</button>
+              <div class="navbar-menu flex gap-30 ml-auto ">
+                <div class="link flex space-x-10 items-center text-white text-[14px] ml-auto font-['Instrument_Sans']">
+                  <a href="/project/about.html">About Us</a>
+                </div>
+                <div class="link flex items-center space-x-2 text-white text-[14px] items-center" style="font-family:'Instrument Sans', sans-serif;">
+                  <a href="/project/services.html">Our Services</a>
+                  <div class="icon">
+                    <img src="/project/assets/img/dropdown.png" alt="dropdown icon">
+                  </div>
+                </div>
+                <div class="link bg-white text-black px-5  rounded-full border border-gray-300 shadow-md w-[105px] h-[33px] items-center">
+                  <button class="w-[65px] h-[17px]  items-center pt-2" style="font-family: 'Instrument Sans', sans-serif; font-size:12px; ">Contact us</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="container">
+            <div class="column">
+              <div class="content">
+                <div class="text">
+                  <h1>p</h1>
+                  <h1>d</h1>
+                </div>
+                <p></p>
+                <img src="" alt="">
+              </div>
+              <div class="actions">
+                <div class="frame112"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-        <div class="container">
-          <div class="column">
-            <div class="content">
-              <div class="text">
-                <h1>p</h1>
-                <h1>d</h1>
-              </div>
-              <p></p>
-              <img src="" alt="">
-            </div>
-            <div class="actions">
-              <div class="frame112"></div>
-            </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="title max-w-4xl mx-auto mb-16">
+          <div class="content space-y-6 text-center">
+            <h3 class="font-['Astrid_Grotesk'] text-5xl md:text-6xl font-normal leading-tight">
+              Who We Are
+            </h3>
+            <p class="font-instrument-sans text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">At Charmorae, we believe a clean space is key to comfort and productivity. Our eco-friendly cleaning services are designed for busy parents and professionals, helping you focus on what matters most—family, career, and a peaceful home. With a commitment to sustainability and well-being, we create pristine environments that promote healthier living.</p>
           </div>
         </div>
+        <img src="https://s3-alpha-sig.figma.com/img/3f2d/e67d/c0a5a16f15cbed8688c0a70c6ad6eb0b?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RaDLSZbus15PSPRi5isZ8yGR-uon-vk~DnLhdEBf4tyXPWqkO8BVxBOOLCBqxqRonVi~GGLeUNP6LOUdkjrR5bNOUY~ZQPciF4ukcT7MjIoMr~SiAyXU2Yds~WZSBJOWdIdtNJyatr-IZC4Nm4~NRPw0NeT17C6DZcBEaP8k8B5a9-PTozJKw9oBRv98oMOWoZNmtx00PGI3~r3XSZ6yDqLjKlRKvQoKb3354Ijl0E-pXB87x515qCpLuS4xAXca9F3LBsCDrjzZI2oBw7Fp7WpObYhMabmigE1MFWln7G3W7N8~EB~kKjY0kdhorHpf~0tzTI0XVNc1Na0h3NYqbw__" alt="">
       </div>
-    </div>
+    </section>
   </body>
 </html>
