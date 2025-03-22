@@ -1,0 +1,23 @@
+/* Smooth dropdown transition */
+.origin-top {
+    transform-origin: top center;
+  }
+  
+  /* Prevent accidental hover-out */
+  .group:hover .dropdown-content {
+    pointer-events: all;
+  }
+
+  /* Custom mobile dropdown transitions */
+.mobile-dropdown-content {
+    transition: max-height 0.3s ease-out, opacity 0.2s ease 0.1s;
+  }
+  
+  .mobile-dropdown.active .mobile-dropdown-content {
+    max-height: 500px; /* Adjust based on content */
+    opacity: 1;
+  }
+  
+  .mobile-dropdown.active img {
+    transform: rotate(180deg);
+  }
