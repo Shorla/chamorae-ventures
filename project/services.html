@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="/project/assets/js/script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Astrid&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,17 +43,23 @@
                   <button class="text-[10px] md:text-[12px] pt-1">Contact us</button>
                 </div>
               </div>
-              <button class="md:hidden text-white p-2" id="mobile-menu-button">
+              <button class="md:hidden text-white p-2 relative" id="mobile-menu-button">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
+                <svg class="w-7 h-7 absolute top-2 inset-0 transition-opacity duration-300 opacity-0" :class="{ 'opacity-100': menuOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
               </button>
-              <div class="md:hidden absolute top-20 left-0 right-0 bg-white/30 backdrop-blur-sm py-4 px-8 
+              <div class="md:hidden absolute top-16 left-40 right-0 bg-white backdrop-blur-sm py-4 px-8 
                   hidden transition-all duration-300" id="mobile-menu">
-                <div class="flex flex-col gap-4">
-                  <a href="/project/about.html" class="text-white">About Us</a>
-                  <a href="/project/services.html" class="text-white flex items-center gap-2">Our Services<img src="/project/assets/img/dropdown.png" alt="dropdown" class="w-4 h-4"></a>
-                  <button class="bg-white text-black px-5 rounded-full border border-gray-300 shadow-md h-[33px] text-sm w-fit">Contact us</button>
+                <div class="flex flex-col gap-8">
+                  <a href="/project/about.html">About Us</a>
+                  <div class="flex gap-39">
+                  <a href="/project/services.html" class=" flex items-center gap-2">Our Services<img src="/project/assets/img/dropdown.png" alt="dropdown" class="w-4 h-4"></a>
+                  <img src="/project/assets/img/arrow_drop_down.png" alt="drop-down" class="w-4 h-4">
+                </div>
+                  <button class="bg-white text-black px-5 rounded-full border border-gray-300 shadow-md h-[56px] text-lg w-full">Contact us</button>
                 </div>
               </div>
             </div>
