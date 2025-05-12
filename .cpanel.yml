@@ -2,4 +2,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/chargnnf/public_html
     - /bin/cp ./project/index.html $DEPLOYPATH
-    - /bin/cp -r ./project/assets $DEPLOYPATH
+    - /bin/cp -r ./project/* $DEPLOYPATH
