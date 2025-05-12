@@ -1,7 +1,6 @@
 
 deployment:
   tasks:
-# Next line defines a DEPLOYPATH with the path to the document root of your website so that you will not have to enter it in each command manually:
-    - export DEPLOYPATH=/home/chargnnf/repositories/chamorae-ventures 
-# This line copies the index.html file to deploy path - the document root of your website:
-    - cp ./project/index.html $DEPLOYPATH
+    - export DEPLOYPATH=/home/chargnnf/repositories/chamorae-ventures/ 
+    - /bin/cp ./project/index.html $DEPLOYPATH
+     - /bin/cp ./project/assests/style.css $DEPLOYPATH
