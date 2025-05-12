@@ -3,4 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/chargnnf/repositories/chamorae-ventures/ 
     - /bin/cp ./project/index.html $DEPLOYPATH
-     - /bin/cp ./project/assests/style.css $DEPLOYPATH
+    - /bin/cp ./project/assests/style.css $DEPLOYPATH
