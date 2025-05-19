@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="/project/assets/js/script.js" defer></script>
-    <link href="/project/assets/style.css" rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
+    <link href="assets/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Astrid&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
   <body>
     <section>
       <div class="hero-page">
-        <div class="hero-heading bg-[url('/project/assets/img/about.png')] h-screen bg-no-repeat bg-cover bg-center w-full min-h-screen relative before:absolute">
+        <div class="hero-heading bg-[url('assets/img/about.png')] h-screen bg-no-repeat bg-cover bg-center w-full min-h-screen relative before:absolute">
           <div class="navbar bg-white/30 w-full max-w-[100%] py-3 md:py-4 px-4 md:px-8 flex items-center justify-between 
             rounded-bl-0 md:rounded-bl-[88px] rounded-tr-0 md:rounded-tr-[88px] 
             rounded-tl-0 md:rounded-tl-[10px] rounded-br-0 md:rounded-br-[10px] shadow-lg">
@@ -26,23 +26,23 @@
             <div class="navbar-content flex items-center justify-between gap-4">
               <div class="navbar-brand  px-4 md:px-25">
                 <div class="logo flex-shrink-0">
-                  <a href="/project/index.html"><img src="/project/assets/img/Navbar Brand.png" alt="icon of a butterfly" class="h-8 md:h-10"></a>
+                  <a href="index.html"><img src="assets/img/Navbar Brand.png" alt="icon of a butterfly" class="h-8 md:h-10"></a>
                 </div>
               </div>
               <div class="navbar-menu hidden md:flex gap-4 md:gap-30 ml-auto md:font-['Instrument_Sans']">
                 <div class="link flex items-center text-white text-[12px] md:text-[14px]">
-                  <a href="/project/about.html">About Us</a>
+                  <a href="about.html">About Us</a>
                 </div>
                 <div class="link group relative flex items-center space-x-1 md:space-x-2 text-white text-[12px] md:text-[14px] cursor-pointer" aria-haspopup="true" aria-expanded="false" style="font-family:'Instrument Sans', sans-serif;">
-                  <a href="/project/services.html" class="hover:text-gray-200">Our Services</a>
+                  <a href="services.html" class="hover:text-gray-200">Our Services</a>
                   <div class="icon transition-transform duration-200 group-hover:rotate-180">
-                    <img src="/project/assets/img/dropdown.png" alt="dropdown icon" class="w-3 md:w-4">
+                    <img src="assets/img/dropdown.png" alt="dropdown icon" class="w-3 md:w-4">
                   </div>
                   <div class="absolute top-11 left-1/2 -translate-x-1/2 mt-2 w-60 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-100 origin-top">
                     <div class="py-2">
-                      <a href="/project/residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a><hr>
-                      <a href="/project/commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a><hr>
-                      <a href="/project/post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a><hr>
+                      <a href="residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a><hr>
+                      <a href="commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a><hr>
+                      <a href="post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a><hr>
                       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Specialised Cleaning</a>
                     </div>
                   </div>
@@ -63,17 +63,17 @@
               <div class="md:hidden absolute top-16 left-40 right-0 bg-white backdrop-blur-sm py-4 px-8 
                   hidden transition-all duration-300" id="mobile-menu">
                 <div class="flex flex-col gap-8">
-                  <a href="/project/about.html">About Us</a>
+                  <a href="about.html">About Us</a>
                   <div class="mobile-dropdown relative">
                     <div class="mobile-dropdown-header flex space-between gap-12 items-center cursor-pointer" data-dropdown-trigger>
                       <span>Our Services</span>
-                      <img src="/project/assets/img/arrow_drop_down.png" alt="dropdown" class="w-4 h-4 transition-transform">
+                      <img src="assets/img/arrow_drop_down.png" alt="dropdown" class="w-4 h-4 transition-transform">
                     </div>
                     <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 max-h-0 opacity-0 pl-4">
                       <div class="py-2 items-left">
-                        <a href="/project/residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a>
-                        <a href="/project/commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a>
-                        <a href="/project/post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a>
+                        <a href="residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a>
+                        <a href="commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a>
+                        <a href="post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Specialised Cleaning</a>
                       </div>
                     </div>
@@ -118,7 +118,7 @@
         <div class="container mx-auto px-4 relative min-h-[800px] pt-[100px]">
           <!-- Background container -->
           <div class="absolute inset-0 -z-10 opacity-20">
-            <div class="w-full h-full bg-[url('/project/assets/img/bubble.png')] bg-cover bg-center"></div>
+            <div class="w-full h-full bg-[url('assets/img/bubble.png')] bg-cover bg-center"></div>
           </div>
       
           <!-- Content -->
@@ -131,13 +131,13 @@
               <div class="frame h-[484px] flex items-center justify-center">
                 <div class="flex gap-[24px] justify-center"> <!-- Added flex container -->
                   <div class="card w-[550px] relative h-[484px] bg-lime-800 rounded-tl-[100px] rounded-tr-[40px] rounded-br-[100px] rounded-bl-[20px]">
-                    <img src="/project/assets/img/mage_goals.png" alt="icon" class="pl-[250px]">
+                    <img src="assets/img/mage_goals.png" alt="icon" class="pl-[250px]">
                     <p class="font-Inter text-white font-semibold text-[32px] leading-[38.4px] text-left pl-6 absolute inset-0 z-10 pt-[170px]">"To provide reliable, eco-friendly cleaning solutions that create safe, healthy, and welcoming environments for homes and businesses."</p>
                   </div>
                   <div class="frame h-[484px] flex items-center justify-center">
                    <div class="flex gap-[24px] justify-center">
                     <div class="card w-[550px] relative h-[484px] bg-sky-800 rounded-tl-[100px] rounded-tr-[40px] rounded-br-[100px] rounded-bl-[20px]">
-                    <img src="/project/assets/img/binoc.svg" alt="icon" class=" opacity-20">
+                    <img src="assets/img/binoc.svg" alt="icon" class=" opacity-20">
                     <p class="font-Inter text-white font-semibold text-[32px] leading-[38.4px] pt-[170px] absolute inset-0 z-10 text-left pl-6">"To provide reliable, eco-friendly cleaning solutions that create safe, healthy, and welcoming environments for homes and businesses."</p>
                     </div>
                   </div>
@@ -158,9 +158,9 @@
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mx-auto">
-            <img src="/project/assets/img/1aboutpic.jpg ">
-            <img src="/project/assets/img/2aboutpic.jpg">
-            <img src="/project/assets/img/3aboutpic.jpg">
+            <img src="assets/img/1aboutpic.jpg ">
+            <img src="assets/img/2aboutpic.jpg">
+            <img src="assets/img/3aboutpic.jpg">
           </div>
         </div>
       </section>
@@ -169,7 +169,7 @@
         <div class="max-w-6xl mx-auto">
           <div class="flex flex-col md:flex-row justify-between gap-8 pb-8 border-b border-gray-300">
             <div class="w-full md:w-auto mb-8 md:mb-0">
-              <img src="/project/assets/img/logo.png" alt="Logo" class="h-16 w-32 mx-auto">
+              <img src="assets/img/logo.png" alt="Logo" class="h-16 w-32 mx-auto">
             </div>
             <div class="flex flex-col sm:flex-row gap-12 md:gap-24">
               <div class="space-y-4">
@@ -193,9 +193,9 @@
             <div class="space-y-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
               <h3 class="font-bold text-lg">CONTACT US</h3>
               <div class="flex gap-4">
-                <img src="/project/assets/img/Vector (7).png" alt="Social" class="w-6 h-6">
-                <img src="/project/assets/img/Vector (5).png" alt="Social" class="w-6 h-6">
-                <img src="/project/assets/img/Vector (6).png" alt="Social" class="w-6 h-6">
+                <img src="assets/img/Vector (7).png" alt="Social" class="w-6 h-6">
+                <img src="assets/img/Vector (5).png" alt="Social" class="w-6 h-6">
+                <img src="assets/img/Vector (6).png" alt="Social" class="w-6 h-6">
               </div>
             </div>
             <div class="md:text-right w-full md:w-auto">
