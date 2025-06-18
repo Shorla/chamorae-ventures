@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chamorae Ventures</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="assets/js/script.js" defer></script>
+    <link href="assets/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Astrid&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">           
+  </head>
+  <body>
+    <section>
+      <div class="hero-page">
+        <div class="hero-heading bg-[url('assets/img/about.png')] h-screen bg-no-repeat bg-cover bg-center w-full min-h-screen relative before:absolute">
+          <div class="navbar bg-white/30 w-full max-w-[100%] py-3 md:py-4 px-4 md:px-8 flex items-center justify-between 
+            rounded-bl-0 md:rounded-bl-[88px] rounded-tr-0 md:rounded-tr-[88px] 
+            rounded-tl-0 md:rounded-tl-[10px] rounded-br-0 md:rounded-br-[10px] shadow-lg">
+          <div class="navbar-container max-w-[1300px] w-full">
+            <div class="navbar-content flex items-center justify-between gap-4">
+              <div class="navbar-brand  px-4 md:px-25">
+                <div class="logo flex-shrink-0">
+                  <a href="index.html"><img src="assets/img/Navbar Brand.png" alt="icon of a butterfly" class="h-8 md:h-10"></a>
+                </div>
+              </div>
+              <div class="navbar-menu hidden md:flex gap-4 md:gap-30 ml-auto md:font-['Instrument_Sans']">
+                <div class="link flex items-center text-white text-[12px] md:text-[14px]">
+                  <a href="about.html">About Us</a>
+                </div>
+                <div class="link group relative flex items-center space-x-1 md:space-x-2 text-white text-[12px] md:text-[14px] cursor-pointer" aria-haspopup="true" aria-expanded="false" style="font-family:'Instrument Sans', sans-serif;">
+                  <a href="services.html" class="hover:text-gray-200">Our Services</a>
+                  <div class="icon transition-transform duration-200 group-hover:rotate-180">
+                    <img src="assets/img/dropdown.png" alt="dropdown icon" class="w-3 md:w-4">
+                  </div>
+                  <div class="absolute top-11 left-1/2 -translate-x-1/2 mt-2 w-60 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-100 origin-top">
+                    <div class="py-2">
+                      <a href="residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a><hr>
+                      <a href="commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a><hr>
+                      <a href="post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a><hr>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Specialised Cleaning</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="link bg-white text-black px-3 md:px-5 rounded-full border border-gray-300 shadow-md 
+                             w-[90px] md:w-[105px] h-[28px] md:h-[33px]">
+                  <button class="text-[10px] md:text-[12px] pt-1">Contact us</button>
+                </div>
+              </div>
+              <button class="md:hidden text-white p-2 relative" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg class="w-7 h-7 absolute top-2 inset-0 transition-opacity duration-300 opacity-0" :class="{ 'opacity-100': menuOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </button>
+              <div class="md:hidden absolute top-16 left-40 right-0 bg-white backdrop-blur-sm py-4 px-8 
+                  hidden transition-all duration-300" id="mobile-menu">
+                <div class="flex flex-col gap-8">
+                  <a href="about.html">About Us</a>
+                  <div class="mobile-dropdown relative">
+                    <div class="mobile-dropdown-header flex space-between gap-12 items-center cursor-pointer" data-dropdown-trigger>
+                      <span>Our Services</span>
+                      <img src="assets/img/arrow_drop_down.png" alt="dropdown" class="w-4 h-4 transition-transform">
+                    </div>
+                    <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 max-h-0 opacity-0 pl-4">
+                      <div class="py-2 items-left">
+                        <a href="residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a>
+                        <a href="commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a>
+                        <a href="post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Specialised Cleaning</a>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="bg-white text-black px-5 rounded-full border border-gray-300 shadow-md h-[56px] text-lg w-full">Contact us</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="container">
+            <div class="column md:h-[424px] pt-[225px] pl-[20px] md:pl-[95px]">
+              <div class="content">
+                <div class="text font-Inter text-white font-[700] text-[36px] md:text-[56px] leading-[1.2] md:leading-[72.8px]">
+                  <h1>About Us</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="py-[24px] md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="title md:max-w-4xl mx-auto mb-16">
+            <div class="content space-y-6 text-center">
+              <h3 class="font-['Astrid_Grotesk'] text-4xl md:text-6xl font-normal leading-tight text-[#58652C]">
+                Who We Are
+              </h3>
+              <p class="font-instrument-sans text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto text-left">At Charmorae, we understand that a clean space is essential for your comfort and productivity. Our professional cleaning services are designed to take the burden off busy parents and professionals, allowing you to focus on what truly matters in your life—whether that's spending quality time with family, advancing your career, or simply enjoying a peaceful home environment.</p>
+              <p class="font-instrument-sans text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto text-left">We are not just committed to cleanliness; we are passionate about creating a healthier planet. Our eco-friendly cleaning solutions ensure that while we make your space shine, we also contribute to a greener, more sustainable world for future generations.</p>
+              <p class="font-instrument-sans text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto text-left">Choose Charmorae Cleaning Services for a pristine environment that enhances your well-being and promotes a healthier lifestyle. Let us handle the cleaning, so you can enjoy the comfort and peace of mind you deserve.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="relative min-h-screen">
+        <div class="container mx-auto px-4 relative min-h-[800px] pt-[100px]">
+          <!-- Background container -->
+          <div class="absolute inset-0 -z-10 opacity-20">
+            <div class="w-full h-full bg-[url('assets/img/bubble.png')] bg-cover bg-center"></div>
+          </div>
+      
+          <!-- Content -->
+          <div class="title max-w-4xl mx-auto mb-16 relative z-20">
+            <div class="content space-y-6 text-center">
+              <p class="font-['Astrid_Grotesk'] text-5xl md:text-6xl font-normal leading-tight text-[#58652C] mb-[50px]">
+                Mission & Vision
+              </p>
+              <!-- Changed frame container -->
+              <div class="frame h-[484px] flex items-center justify-center">
+                <div class="flex gap-[24px] justify-center"> <!-- Added flex container -->
+                  <div class="card w-[550px] relative h-[484px] bg-lime-800 rounded-tl-[100px] rounded-tr-[40px] rounded-br-[100px] rounded-bl-[20px]">
+                    <img src="assets/img/mage_goals.png" alt="icon" class="pl-[250px]">
+                    <p class="font-Inter text-white font-semibold text-[32px] leading-[38.4px] text-left pl-6 absolute inset-0 z-10 pt-[170px]">"To provide reliable, eco-friendly cleaning solutions that create safe, healthy, and welcoming environments for homes and businesses."</p>
+                  </div>
+                  <div class="frame h-[484px] flex items-center justify-center">
+                   <div class="flex gap-[24px] justify-center">
+                    <div class="card w-[550px] relative h-[484px] bg-sky-800 rounded-tl-[100px] rounded-tr-[40px] rounded-br-[100px] rounded-bl-[20px]">
+                    <img src="assets/img/binoc.svg" alt="icon" class=" opacity-20">
+                    <p class="font-Inter text-white font-semibold text-[32px] leading-[38.4px] pt-[170px] absolute inset-0 z-10 text-left pl-6">"To provide reliable, eco-friendly cleaning solutions that create safe, healthy, and welcoming environments for homes and businesses."</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[24px] md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="title md:max-w-4xl mx-auto mb-16">
+            <div class="content space-y-6 text-center">
+              <h3 class="font-['Astrid_Grotesk'] text-4xl md:text-6xl font-normal leading-tight text-[#58652C]">
+               Meet The Team
+              </h3>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mx-auto">
+            <img src="assets/img/1aboutpic.jpg ">
+            <img src="assets/img/2aboutpic.jpg">
+            <img src="assets/img/3aboutpic.jpg">
+          </div>
+        </div>
+      </section>
+
+    <footer class="w-full bg-[#F7F7FA] md:py-16 md:px-6 text-center">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex flex-col md:flex-row justify-between gap-8 pb-8 border-b border-gray-300">
+            <div class="w-full md:w-auto mb-8 md:mb-0">
+              <img src="assets/img/logo.png" alt="Logo" class="h-16 w-32 mx-auto">
+            </div>
+            <div class="flex flex-col sm:flex-row gap-12 md:gap-24">
+              <div class="space-y-4">
+                <h3 class="font-bold text-lg">ABOUT US</h3>
+                <div class="space-y-2">
+                  <p class="hover:text-gray-600 cursor-pointer">Who We are</p>
+                  <p class="hover:text-gray-600 cursor-pointer">Mission & Vision</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h3 class="font-bold text-lg">SERVICES</h3>
+                <div class="space-y-2">
+                  <p class="hover:text-gray-600 cursor-pointer">Residential cleaning</p>
+                  <p class="hover:text-gray-600 cursor-pointer">Commercial Cleaning</p>
+                  <p class="hover:text-gray-600 cursor-pointer">Post Construction Cleaning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-8 flex flex-col md:flex-row justify-between md:items-start items-center gap-6">
+            <div class="space-y-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+              <h3 class="font-bold text-lg">CONTACT US</h3>
+              <div class="flex gap-4">
+                <img src="assets/img/Vector (7).png" alt="Social" class="w-6 h-6">
+                <img src="assets/img/Vector (5).png" alt="Social" class="w-6 h-6">
+                <img src="assets/img/Vector (6).png" alt="Social" class="w-6 h-6">
+              </div>
+            </div>
+            <div class="md:text-right w-full md:w-auto">
+              <p class="text-sm text-gray-600">Copyright © 2025 Charmorae</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    </body>
+  </html>
+ 
