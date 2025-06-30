@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chamorae Ventures</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="/project/assets/js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Astrid&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">           
+  </head>
+  <body>
+    <section>
+      <div class="hero-page">
+        <div class="hero-heading bg-[url('/project/assets/img/plisthome.png')] h-[812px] md:h-screen bg-no-repeat bg-cover bg-center">
+          <div class="navbar bg-white/30 w-full max-w-[100%] py-3 md:py-4 px-4 md:px-8 flex items-center justify-between rounded-bl-0 md:rounded-bl-[88px] rounded-tr-0 md:rounded-tr-[88px] rounded-tl-0 md:rounded-tl-[10px] rounded-br-0 md:rounded-br-[10px] shadow-lg">
+          <div class="navbar-container max-w-[1300px] w-full">
+          <div class="navbar-content flex items-center justify-between gap-4">
+            <div class="navbar-brand  px-4 md:px-25">
+              <div class="logo flex-shrink-0">
+                <a href="index.html"><img src="assets/img/Navbar Brand.png" alt="icon of a butterfly" class="h-8 md:h-10"></a>
+              </div>
+            </div>
+            <div class="navbar-menu hidden md:flex gap-4 md:gap-30 ml-auto md:font-['Instrument_Sans']">
+              <div class="link flex items-center text-white text-[12px] md:text-[14px]">
+                <a href="about.html">About Us</a>
+              </div>
+              <div class="link flex items-center text-white text-[12px] md:text-[14px]">
+                <a href="pricelist.html">Price List</a>
+              </div>
+              <div class="link group relative flex items-center space-x-1 md:space-x-2 text-white text-[12px] md:text-[14px] cursor-pointer" aria-haspopup="true" aria-expanded="false" style="font-family:'Instrument Sans', sans-serif;">
+                <a href="services.html" class="hover:text-gray-200">Our Services</a>
+                <div class="icon transition-transform duration-200 group-hover:rotate-180">
+                  <img src="assets/img/dropdown.png" alt="dropdown icon" class="w-3 md:w-4">
+                </div>
+                <div class="absolute top-11 left-1/2 -translate-x-1/2 mt-2 w-60 bg-white/90 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 delay-100 origin-top">
+                  <div class="py-2">
+                    <a href="residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a><hr>
+                    <a href="commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a><hr>
+                    <a href="post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a><hr>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Specialised Cleaning</a>
+                  </div>
+                </div>
+              </div>
+              <div class="link bg-white text-black px-3 md:px-5 rounded-full border border-gray-300 shadow-md 
+                           w-[90px] md:w-[105px] h-[28px] md:h-[33px]">
+                <button class="text-[10px] md:text-[12px] pt-1">Contact us</button>
+              </div>
+            </div>
+            <button class="md:hidden text-white p-2 relative" id="mobile-menu-button">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+              <svg class="w-7 h-7 absolute top-2 inset-0 transition-opacity duration-300 opacity-0" :class="{ 'opacity-100': menuOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+            <div class="md:hidden absolute top-16 left-40 right-0 bg-white backdrop-blur-sm py-4 px-8 
+                hidden transition-all duration-300" id="mobile-menu">
+              <div class="flex flex-col gap-8">
+                <a href="about.html">About Us</a>
+                <div class="mobile-dropdown relative">
+                  <div class="mobile-dropdown-header flex space-between gap-12 items-center cursor-pointer" data-dropdown-trigger>
+                    <span>Our Services</span>
+                    <img src="assets/img/arrow_drop_down.png" alt="dropdown" class="w-4 h-4 transition-transform">
+                  </div>
+                  <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 max-h-0 opacity-0 pl-4">
+                    <div class="py-2 items-left">
+                      <a href="residential.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Residential Cleaning</a>
+                      <a href="commercial.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Commercial Cleaning</a>
+                      <a href="post.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Post Construction Cleaning</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/60">Specialised Cleaning</a>
+                    </div>
+                  </div>
+                </div>
+                <button class="bg-white text-black px-5 rounded-full border border-gray-300 shadow-md h-[56px] text-lg w-full">Contact us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+          <div class="container">
+            <div class="column md:h-[424px] pt-[75px] md:pt-[75px] pl-[20px] md:pl-[95px]">
+              <div class="content flex-initial">
+                <div class="text font-Inter text-white font-[700] text-[36px] md:text-[56px] leading-[1.2] md:leading-[72.8px]">
+                  <h1>Price List</h1>
+                </div>
+                </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="py-[24px] md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="title md:max-w-4xl mx-auto mb-16">
+            <div class="content space-y-6 text-left mb-16">
+              <h3 class="font-['Abhaya Libre'] text-4xl md:text-6xl font-normal leading-tight ">
+                Commercial Businesses
+              </h3>
+              <p class="font-instrument-sans text-base md:text-lg text-gray-600 leading-relaxed max-w-3xl">Offices, Restaurants etc. Contact for estimate</p>
+            </div>
+            <hr>
+            <div class="content space-y-6 text-left mb-16">
+              <h4 class="font-['Abhaya Libre'] text-4xl md:text-6xl font-normal leading-tight">Residential Homes</h4>
+              
+              <!-- Example for one dropdown - apply same structure to others -->
+             <div class="mobile-dropdown border-b">
+               <div class="flex justify-between items-center w-full py-4 cursor-pointer" data-dropdown-trigger>
+                <h5 class="text-base md:text-4xl text-[#1877A2]">Sofa Deep Cleaning Price List</h5>
+                <img src="/project/assets/img/arrow_drop_down.png" alt="dropdown" 
+                class="w-6 h-6 transform transition-transform duration-200">
+               </div>
+               <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 max-h-0">
+                <div class="design flex md:gap-176 gap-30 px-4 py-4 w-full font-bold">
+                  <p> Item</p> 
+                  <p> Starting Price ₦</p>
+                </div> 
+                <div class="design flex md:gap-181 gap-45 py-4 px-4 w-full bg-[#D8E8AD33]">
+                  <p> 1 Seater</p>
+                  <p> ₦10,000</p>
+                </div>
+                <div class="design flex md:gap-181 gap-45 px-4 py-4 w-full">
+                  <p> 2 Seater</p>
+                  <p> ₦15,000 </p>
+                </div>
+                <div class="design flex md:gap-181 gap-45 px-4 py-4 w-full bg-[#D8E8AD33]">
+                  <p> 3 Seater</p>
+                  <p> ₦25,000</p>
+                </div>
+                <div class="design flex md:gap-181 gap-45 px-4 py-4 w-full">
+                  <p> 4 Seater</p>
+                  <p> ₦35,000</p>
+                </div>
+                <div class="design flex md:gap-140 gap-7 px-4 py-4 w-full bg-[#D8E8AD33]">
+                  <p> 1 Set of chairs (3,2,1,1, -Seaters)</p>
+                  <p> ₦60,000</p>
+                </div>
+                <div class="design flex md:gap-140 gap-40 px-4 py-4 w-full">
+                  <p> 2 Set of chairs (3,2,1,1 -Seaters)</p>
+                  <p> ₦100,000</p>
+                </div>
+                <div class="design flex md:gap-140 gap-35 px-4 py-4 w-full bg-[#D8E8AD33]">
+                  <p> 3 Set of chairs (3,2,1,1 -Seaters)</p>
+                  <p> ₦150,000</p>
+                </div>
+               </div>
+             </div>
+
+              <!-- Rug Cleaning -->
+              <div class="mobile-dropdown border-b">
+                <div class="flex justify-between items-center w-full py-4 cursor-pointer" data-dropdown-trigger>
+                 <h5 class="text-base md:text-4xl text-[#1877A2]">Rug Deep Cleaning Price List</h5>
+                 <img src="/project/assets/img/arrow_drop_down.png" alt="dropdown" 
+                 class="w-6 h-6 transform transition-transform duration-200">
+                </div>
+                <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 max-h-0">
+                  <div class="design flex md:gap-176 gap-32 px-4 py-4 w-full font-bold">
+                    <p> Item </p>
+                    <p> Starting Price ₦ </p>
+                  </div>
+                  <div class="design flex md:gap-180 gap-40 py-4 px-4 w-full bg-[#D8E8AD33]">
+                    <p> Small Rug</p>
+                    <p> ₦10,000 </p>
+                  </div>
+                  <div class="design flex md:gap-175 gap-35 px-4 py-4 w-full">
+                    <p> Medium Rug</p>
+                    <p> ₦12,000 </p>
+                  </div>
+                  <div class="design flex md:gap-180 gap-40 px-4 py-4 w-full bg-[#D8E8AD33]">
+                    <p> Large Rug</p>
+                    <p> ₦15,000 </p>
+                  </div>
+                  <div class="design flex md:gap-181 gap-42 px-4 py-4 w-full">
+                    <p> Maxi Rug </p>
+                    <p> ₦18,000 </p>
+                  </div>
+                  <div class="design flex md:gap-170 gap-32 px-4 py-4 w-full bg-[#D8E8AD33]">
+                    <p> Extra Maxi Rug </p>
+                    <p> ₦29,000 </p>
+                  </div>
+                  <div class="design flex md:gap-163 gap-25 px-4 py-4 w-full">
+                    <p> Wall to Wall Carpet</p>
+                    <p> ₦30,000 </p>
+                  </div>
+                  <p> *Kindly note that a home service of rug deep cleaning attracts a logistics fee of ₦10,000</p>
+                </div>
+              </div>
+            
+              <!-- Dining Chair -->
+              <div class="mobile-dropdown border-b">
+                <div class="flex justify-between items-center w-full py-4 cursor-pointer" data-dropdown-trigger>
+                 <h5 class="text-base md:text-4xl text-[#1877A2]">Dining Chair & Mattress Cleaning</h5>
+                 <img src="/project/assets/img/arrow_drop_down.png" alt="dropdown" 
+                 class="w-6 h-6 transform transition-transform duration-200">
+                </div>
+                <div class="mobile-dropdown-content overflow-hidden transition-all duration-300 max-h-0">
+                  <div class="design flex md:gap-176 gap-35 px-4 py-4 w-full font-bold">
+                    <p> Item </p>
+                    <p> Starting Price ₦ </p>
+                  </div>
+                  <div class="design flex md:gap-175 gap-37 py-4 px-4 w-full bg-[#D8E8AD33]">
+                    <p> 1 Dining Seat</p>
+                    <p> ₦5,000</p>
+                  </div>
+                  <div class="design flex md:gap-155 gap-25 px-4 py-4 w-full">
+                    <p> A set with 4 Dining Seat</p>
+                    <p> ₦18,000</p>
+                  </div>
+                  <div class="design flex md:gap-154 gap-35 py-4 px-4 w-full bg-[#D8E8AD33]"> 
+                    <p> A set with 6 Dining Seat</p>
+                    <p> ₦25,000</p>
+                  </div>
+                  <div class="design flex md:gap-154 gap-35 px-4 py-4 w-full">
+                    <p> A set with 8 Dining Seat</p>
+                    <p> ₦35,000</p>
+                  </div>
+                  <div class="design flex md:gap-152 gap-35 py-4 px-4 w-full bg-[#D8E8AD33]">
+                    <p> A set with 10 Dining seat </p>
+                    <p> ₦45,000</p>
+                  </div>
+                  <div class="design flex md:gap-172 gap-35 px-4 py-4 w-full">
+                    <p> Mattress (Depends on size) </p>
+                    <p> ₦20,000 - ₦30,000</p>
+                  </div>
+                  <div class="design flex md:gap-140 gap-35 py-4 px-4 w-full">
+                    <p class="text-[#1877A2]"> *Terms and Condition apply. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+
+
+
+    <footer class="w-full bg-[#F7F7FA] md:py-16 md:px-6 text-center pt-16 md:pt-0">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between gap-8 pb-8 border-b border-gray-300">
+          <div class="w-full md:w-auto mb-8 md:mb-0">
+            <img src="assets/img/logo.png" alt="Logo" class="h-16 w-32 mx-auto">
+          </div>
+          <div class="flex flex-col sm:flex-row gap-12 md:gap-24">
+            <div class="space-y-4">
+              <h3 onclick="window.location.href='about.html';" class="font-bold text-lg">ABOUT US</h3>
+              <div class="space-y-2">
+                <p onclick="window.location.href='about.html';"class="hover:text-gray-600 cursor-pointer">Who We are</p>
+                <p onclick="window.location.href='about.html';"class="hover:text-gray-600 cursor-pointer">Mission & Vision</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <h3 class="font-bold text-lg">SERVICES</h3>
+              <div class="space-y-2">
+                <p onclick="window.location.href='residential.html';"class="hover:text-gray-600 cursor-pointer">Residential cleaning</p>
+                <p onclick="window.location.href='commercial.html';"class="hover:text-gray-600 cursor-pointer">Commercial Cleaning</p>
+                <p onclick="window.location.href='post.html';"class="hover:text-gray-600 cursor-pointer">Post Construction Cleaning</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-8 flex flex-col md:flex-row justify-between md:items-start items-center gap-6">
+          <div class="space-y-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <h3 class="font-bold text-lg">CONTACT US</h3>
+            <div class="flex gap-4">
+              <img onclick="window.location.href='https://www.instagram.com/char.morae?igsh=bzhsaHVrbG15ZmN3&utm_source=qr';" src="assets/img/Vector (7).png" alt="Social" class="w-6 h-6">
+              <img onclick="window.location.href='https://www.facebook.com/share/199GThWCEg/?mibextid=wwXIfr';" src="assets/img/Vector (5).png" alt="Social" class="w-6 h-6">
+              <img onclick="window.location.href='https://www.tiktok.com/@char.morae?_t=ZN-8wGvTAKiWwg&_r=1';" src="assets/img/Vector (6).png" alt="Social" class="w-6 h-6">
+            </div>
+          </div>
+          <div class="md:text-right w-full md:w-auto">
+            <p class="text-sm text-gray-600">Copyright © 2025 Charmorae</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
