@@ -93,4 +93,173 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Dropdown functionality (completely separate from mobile menu)
+    const dropdownTriggers = document.querySelectorAll('[data-dropdown-trigger]');
+
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const parent = this.closest('.mobile-dropdown');
+            const content = parent.querySelector('.mobile-dropdown-content');
+            const icon = this.querySelector('img'); // Changed to search within trigger
+
+            // Close other dropdowns
+            document.querySelectorAll('.mobile-dropdown').forEach(d => {
+                if(d !== parent) {
+                    d.classList.remove('active');
+                    const otherContent = d.querySelector('.mobile-dropdown-content');
+                    const otherIcon = d.querySelector('[data-dropdown-trigger] img');
+                    if (otherContent) {
+                        otherContent.style.maxHeight = '0';
+                        otherContent.style.opacity = '0';
+                    }
+                    if (otherIcon) {
+                        otherIcon.style.transform = '';
+                    }
+                }
+            });
+
+            // Toggle current dropdown
+            const isOpening = !parent.classList.contains('active');
+            parent.classList.toggle('active', isOpening);
+            
+            if (icon) {
+                icon.style.transform = isOpening ? 'rotate(180deg)' : '';
+            }
+            
+            // Animate content
+            if (content) {
+                if (isOpening) {
+                    content.style.maxHeight = `${content.scrollHeight}px`;
+                    content.style.opacity = '1';
+                } else {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                }
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside (doesn't affect mobile menu)
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mobile-dropdown')) {
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = dropdown.querySelector('[data-dropdown-trigger] img');
+                if (content) {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                }
+                if (icon) {
+                    icon.style.transform = '';
+                }
+            });
+        }
+    });
+
+    // ESC key closes dropdowns without affecting mobile menu
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape') {
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = dropdown.querySelector('[data-dropdown-trigger] img');
+                if (content) {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                }
+                if (icon) {
+                    icon.style.transform = '';
+                }
+            });
+        }
+    });
+});document.addEventListener('DOMContentLoaded', function() {
+    // Dropdown functionality (completely separate from mobile menu)
+    const dropdownTriggers = document.querySelectorAll('[data-dropdown-trigger]');
+
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const parent = this.closest('.mobile-dropdown');
+            const content = parent.querySelector('.mobile-dropdown-content');
+            const icon = this.querySelector('img'); // Changed to search within trigger
+
+            // Close other dropdowns
+            document.querySelectorAll('.mobile-dropdown').forEach(d => {
+                if(d !== parent) {
+                    d.classList.remove('active');
+                    const otherContent = d.querySelector('.mobile-dropdown-content');
+                    const otherIcon = d.querySelector('[data-dropdown-trigger] img');
+                    if (otherContent) {
+                        otherContent.style.maxHeight = '0';
+                        otherContent.style.opacity = '0';
+                    }
+                    if (otherIcon) {
+                        otherIcon.style.transform = '';
+                    }
+                }
+            });
+
+            // Toggle current dropdown
+            const isOpening = !parent.classList.contains('active');
+            parent.classList.toggle('active', isOpening);
+            
+            if (icon) {
+                icon.style.transform = isOpening ? 'rotate(180deg)' : '';
+            }
+            
+            // Animate content
+            if (content) {
+                if (isOpening) {
+                    content.style.maxHeight = `${content.scrollHeight}px`;
+                    content.style.opacity = '1';
+                } else {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                }
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside (doesn't affect mobile menu)
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mobile-dropdown')) {
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = dropdown.querySelector('[data-dropdown-trigger] img');
+                if (content) {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                }
+                if (icon) {
+                    icon.style.transform = '';
+                }
+            });
+        }
+    });
+
+    // ESC key closes dropdowns without affecting mobile menu
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape') {
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+                const content = dropdown.querySelector('.mobile-dropdown-content');
+                const icon = dropdown.querySelector('[data-dropdown-trigger] img');
+                if (content) {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                }
+                if (icon) {
+                    icon.style.transform = '';
+                }
+            });
+        }
+    });
 });
