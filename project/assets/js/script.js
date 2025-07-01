@@ -1,51 +1,95 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Existing mobile menu variables
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = mobileMenuButton.querySelector('svg:first-child');
+    const closeIcon = mobileMenuButton.querySelector('svg:last-child');
+    const html = document.documentElement;
+
+    // New dropdown variables
     const dropdownTriggers = document.querySelectorAll('[data-dropdown-trigger]');
 
+    // Toggle mobile menu (existing functionality)
+    mobileMenuButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        
+        hamburgerIcon.classList.toggle('opacity-0', !isOpen);
+        closeIcon.classList.toggle('opacity-0', isOpen);
+        this.setAttribute('aria-expanded', !isOpen);
+    });
+
+    // New dropdown functionality
     dropdownTriggers.forEach(trigger => {
         trigger.addEventListener('click', function(e) {
             e.stopPropagation();
             const parent = this.closest('.mobile-dropdown');
             const content = parent.querySelector('.mobile-dropdown-content');
-            const icon = this.querySelector('img');
+            const icon = parent.querySelector('img');
 
             // Close other dropdowns
             document.querySelectorAll('.mobile-dropdown').forEach(d => {
-                if (d !== parent) {
-                    const otherContent = d.querySelector('.mobile-dropdown-content');
-                    const otherIcon = d.querySelector('img');
-                    otherContent.classList.add('max-h-0');
-                    otherContent.classList.remove('pb-4');
-                    if (otherIcon) otherIcon.classList.remove('rotate-180');
+                if(d !== parent) {
+                    d.classList.remove('active');
+                    d.querySelector('img').style.transform = '';
                 }
             });
 
             // Toggle current dropdown
-            if (content.classList.contains('max-h-0')) {
-                // Opening
-                content.classList.remove('max-h-0');
-                content.classList.add('pb-4');
-                content.style.maxHeight = content.scrollHeight + 'px';
-                if (icon) icon.classList.add('rotate-180');
+            const isOpening = !parent.classList.contains('active');
+            parent.classList.toggle('active', isOpening);
+            icon.style.transform = isOpening ? 'rotate(180deg)' : '';
+            
+            // Animate content
+            if(isOpening) {
+                content.style.maxHeight = `${content.scrollHeight}px`;
+                content.style.opacity = '1';
             } else {
-                // Closing
-                content.classList.add('max-h-0');
-                content.classList.remove('pb-4');
                 content.style.maxHeight = '0';
-                if (icon) icon.classList.remove('rotate-180');
+                content.style.opacity = '0';
             }
         });
     });
 
-    // Close all dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.mobile-dropdown')) {
+    // Close all menus when clicking outside (updated)
+    html.addEventListener('click', function() {
+        // Close mobile menu
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('opacity-0');
+        closeIcon.classList.add('opacity-0');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+
+        // Close all dropdowns
+        document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+            dropdown.classList.remove('active');
+            dropdown.querySelector('.mobile-dropdown-content').style.maxHeight = '0';
+            dropdown.querySelector('img').style.transform = '';
+        });
+    });
+
+    // Close menu when clicking links (updated)
+    mobileMenu.querySelectorAll('a, button').forEach(item => {
+        item.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            
+            // Also reset dropdowns
             document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
-                const content = dropdown.querySelector('.mobile-dropdown-content');
-                const icon = dropdown.querySelector('img');
-                content.classList.add('max-h-0');
-                content.classList.remove('pb-4');
-                content.style.maxHeight = '0';
-                if (icon) icon.classList.remove('rotate-180');
+                dropdown.classList.remove('active');
+                dropdown.querySelector('.mobile-dropdown-content').style.maxHeight = '0';
+                dropdown.querySelector('img').style.transform = '';
+            });
+        });
+    });
+
+    // Existing ESC key functionality
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape') {
+            mobileMenu.classList.add('hidden');
+            // Also close dropdowns on ESC
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+                dropdown.querySelector('.mobile-dropdown-content').style.maxHeight = '0';
+                dropdown.querySelector('img').style.transform = '';
             });
         }
     });
